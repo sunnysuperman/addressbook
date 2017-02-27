@@ -62,25 +62,6 @@ public class ParseRegionOfES extends BaseTest {
 
 	}
 
-	public void test_parse1() throws Exception {
-		PareseRegionOfESHandler handler = new PareseRegionOfESHandler();
-		FileUtil.read(ParseRegionOfES.class.getResourceAsStream("/com/petkit/base/test/conf/location/region-ES.source"),
-				null, handler);
-		for (SimpleAddressComponent component : handler.root) {
-			if (component.getChildren() == null) {
-				if (component.getName().equals("Ceuta") || component.getName().equals("Melilla")) {
-					continue;
-				}
-				SimpleAddressComponent clone = new SimpleAddressComponent();
-				int code = Integer.parseInt(component.getCode()) * 100 + 1;
-				clone.setCode(String.valueOf(code));
-				clone.setName(component.getName());
-				component.setChildren(Collections.singletonList(clone));
-			}
-		}
-		FileUtil.write(new File("/data/tmp/region-ES-province.json"), JSONUtil.toJSONString(handler.root));
-	}
-
 	private void error(String s) {
 		System.err.println(s);
 	}
@@ -133,13 +114,6 @@ public class ParseRegionOfES extends BaseTest {
 		return names;
 	}
 
-	public void test_parse_municipalities_of_province() throws Exception {
-		String html = FileUtil.read(ParseRegionOfES.class
-				.getResourceAsStream("/com/petkit/base/test/conf/location/List_of_municipalities_in_Seville"));
-		List<String> towns = parseProvinceHtml("Seville", html);
-		System.out.println(StringUtil.join(towns, "\n"));
-	}
-
 	private String botProvince(SimpleAddressComponent province) throws Exception {
 		HttpClient client = new HttpClient();
 		boolean ok = false;
@@ -153,9 +127,34 @@ public class ParseRegionOfES extends BaseTest {
 		return html;
 	}
 
+	public void test_parse1() throws Exception {
+		PareseRegionOfESHandler handler = new PareseRegionOfESHandler();
+		FileUtil.read(BaseTest.class.getResourceAsStream("resources/es/region-ES.source"), null, handler);
+		for (SimpleAddressComponent component : handler.root) {
+			if (component.getChildren() == null) {
+				if (component.getName().equals("Ceuta") || component.getName().equals("Melilla")) {
+					continue;
+				}
+				SimpleAddressComponent clone = new SimpleAddressComponent();
+				int code = Integer.parseInt(component.getCode()) * 100 + 1;
+				clone.setCode(String.valueOf(code));
+				clone.setName(component.getName());
+				component.setChildren(Collections.singletonList(clone));
+			}
+		}
+		System.out.println(JSONUtil.toJSONString(handler.root));
+	}
+
+	public void test_parse_municipalities_of_province() throws Exception {
+		String html = FileUtil.read(BaseTest.class
+				.getResourceAsStream("resources/es/List_of_municipalities_in_Seville"));
+		List<String> towns = parseProvinceHtml("Seville", html);
+		System.out.println(StringUtil.join(towns, "\n"));
+	}
+
 	public void test_bot_provinces() throws Exception {
-		List<?> autonomousCommunities = JSONUtil.parseJSONArray(FileUtil.read(ParseRegionOfES.class
-				.getResourceAsStream("/com/petkit/base/test/conf/location/region-ES-province.json")));
+		List<?> autonomousCommunities = JSONUtil.parseJSONArray(FileUtil.read(BaseTest.class
+				.getResourceAsStream("resources/es/region-ES-province.json")));
 		for (Object autonomousCommunity : autonomousCommunities) {
 			SimpleAddressComponent community = BeanUtil.map2bean((Map<?, ?>) autonomousCommunity,
 					new SimpleAddressComponent());
@@ -170,8 +169,8 @@ public class ParseRegionOfES extends BaseTest {
 	}
 
 	public void test_parse_municipalities_of_provinces() throws Exception {
-		List<?> autonomousCommunities = JSONUtil.parseJSONArray(FileUtil.read(ParseRegionOfES.class
-				.getResourceAsStream("/com/petkit/base/test/conf/location/region-ES-province.json")));
+		List<?> autonomousCommunities = JSONUtil.parseJSONArray(FileUtil.read(BaseTest.class
+				.getResourceAsStream("resources/es/region-ES-province.json")));
 		List<SimpleAddressComponent> root = new ArrayList<SimpleAddressComponent>(autonomousCommunities.size());
 		for (Object autonomousCommunity : autonomousCommunities) {
 			SimpleAddressComponent community = BeanUtil.map2bean((Map<?, ?>) autonomousCommunity,
