@@ -1,0 +1,312 @@
+[
+    {
+        "children": [
+            {
+                "code": "101",
+                "name": "Almería"
+            },
+            {
+                "code": "102",
+                "name": "Cádiz"
+            },
+            {
+                "code": "103",
+                "name": "Córdoba"
+            },
+            {
+                "code": "104",
+                "name": "Granada"
+            },
+            {
+                "code": "105",
+                "name": "Huelva"
+            },
+            {
+                "code": "106",
+                "name": "Jaén"
+            },
+            {
+                "code": "107",
+                "name": "Málaga"
+            },
+            {
+                "code": "108",
+                "name": "Seville"
+            }
+        ],
+        "code": "1",
+        "name": "Andalusia"
+    },
+    {
+        "children": [
+            {
+                "code": "201",
+                "name": "Huesca"
+            },
+            {
+                "code": "202",
+                "name": "Teruel"
+            },
+            {
+                "code": "203",
+                "name": "Zaragoza"
+            }
+        ],
+        "code": "2",
+        "name": "Aragon"
+    },
+    {
+        "children": [
+            {
+                "code": "301",
+                "name": "Asturias"
+            }
+        ],
+        "code": "3",
+        "name": "Asturias"
+    },
+    {
+        "children": [
+            {
+                "code": "401",
+                "name": "Balearic Islands"
+            }
+        ],
+        "code": "4",
+        "name": "Balearic Islands"
+    },
+    {
+        "children": [
+            {
+                "code": "501",
+                "name": "Álava"
+            },
+            {
+                "code": "502",
+                "name": "Biscay"
+            },
+            {
+                "code": "503",
+                "name": "Gipuzkoa"
+            }
+        ],
+        "code": "5",
+        "name": "Basque Country"
+    },
+    {
+        "children": [
+            {
+                "code": "601",
+                "name": "Las Palmas"
+            },
+            {
+                "code": "602",
+                "name": "Santa Cruz de Tenerife"
+            }
+        ],
+        "code": "6",
+        "name": "Canary Islands"
+    },
+    {
+        "children": [
+            {
+                "code": "701",
+                "name": "Cantabria"
+            }
+        ],
+        "code": "7",
+        "name": "Cantabria"
+    },
+    {
+        "children": [
+            {
+                "code": "801",
+                "name": "Ávila"
+            },
+            {
+                "code": "802",
+                "name": "Burgos"
+            },
+            {
+                "code": "803",
+                "name": "León"
+            },
+            {
+                "code": "804",
+                "name": "Palencia"
+            },
+            {
+                "code": "805",
+                "name": "Salamanca"
+            },
+            {
+                "code": "806",
+                "name": "Segovia"
+            },
+            {
+                "code": "807",
+                "name": "Soria"
+            },
+            {
+                "code": "808",
+                "name": "Valladolid"
+            },
+            {
+                "code": "809",
+                "name": "Zamora"
+            }
+        ],
+        "code": "8",
+        "name": "Castile and León"
+    },
+    {
+        "children": [
+            {
+                "code": "901",
+                "name": "Albacete"
+            },
+            {
+                "code": "902",
+                "name": "Ciudad Real"
+            },
+            {
+                "code": "903",
+                "name": "Cuenca"
+            },
+            {
+                "code": "904",
+                "name": "Guadalajara"
+            },
+            {
+                "code": "905",
+                "name": "Toledo"
+            }
+        ],
+        "code": "9",
+        "name": "Castile–La Mancha"
+    },
+    {
+        "children": [
+            {
+                "code": "1001",
+                "name": "Barcelona"
+            },
+            {
+                "code": "1002",
+                "name": "Girona"
+            },
+            {
+                "code": "1003",
+                "name": "Lleida"
+            },
+            {
+                "code": "1004",
+                "name": "Tarragona"
+            }
+        ],
+        "code": "10",
+        "name": "Catalonia"
+    },
+    {
+        "children": [
+            {
+                "code": "1101",
+                "name": "Badajoz"
+            },
+            {
+                "code": "1102",
+                "name": "Cáceres"
+            }
+        ],
+        "code": "11",
+        "name": "Extremadura"
+    },
+    {
+        "children": [
+            {
+                "code": "1201",
+                "name": "A Coruña"
+            },
+            {
+                "code": "1202",
+                "name": "Lugo"
+            },
+            {
+                "code": "1203",
+                "name": "Ourense"
+            },
+            {
+                "code": "1204",
+                "name": "Pontevedra"
+            }
+        ],
+        "code": "12",
+        "name": "Galicia"
+    },
+    {
+        "children": [
+            {
+                "code": "1301",
+                "name": "Madrid"
+            }
+        ],
+        "code": "13",
+        "name": "Madrid"
+    },
+    {
+        "children": [
+            {
+                "code": "1401",
+                "name": "Murcia"
+            }
+        ],
+        "code": "14",
+        "name": "Murcia"
+    },
+    {
+        "children": [
+            {
+                "code": "1501",
+                "name": "Navarre"
+            }
+        ],
+        "code": "15",
+        "name": "Navarre"
+    },
+    {
+        "children": [
+            {
+                "code": "1601",
+                "name": "La Rioja"
+            }
+        ],
+        "code": "16",
+        "name": "La Rioja"
+    },
+    {
+        "children": [
+            {
+                "code": "1701",
+                "name": "Alicante"
+            },
+            {
+                "code": "1702",
+                "name": "Castellón"
+            },
+            {
+                "code": "1703",
+                "name": "Valencia"
+            }
+        ],
+        "code": "17",
+        "name": "Valencian Community"
+    },
+    {
+        "code": "18",
+        "name": "Ceuta"
+    },
+    {
+        "code": "19",
+        "name": "Melilla"
+    }
+]
