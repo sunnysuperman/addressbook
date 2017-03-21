@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.github.sunnysuperman.addressbook.test.BaseTest;
-import com.github.sunnysuperman.commons.utils.BeanUtil;
+import com.github.sunnysuperman.commons.bean.Bean;
 import com.github.sunnysuperman.commons.utils.FileUtil;
 import com.github.sunnysuperman.commons.utils.FileUtil.ReadLineHandler;
 import com.github.sunnysuperman.commons.utils.HttpClient;
@@ -156,7 +156,7 @@ public class ParseRegionOfES extends BaseTest {
 		List<?> autonomousCommunities = JSONUtil.parseJSONArray(FileUtil.read(BaseTest.class
 				.getResourceAsStream("resources/es/region-ES-province.json")));
 		for (Object autonomousCommunity : autonomousCommunities) {
-			SimpleAddressComponent community = BeanUtil.map2bean((Map<?, ?>) autonomousCommunity,
+			SimpleAddressComponent community = Bean.fromMap((Map<?, ?>) autonomousCommunity,
 					new SimpleAddressComponent());
 			if (community.getChildren() == null) {
 				continue;
@@ -173,7 +173,7 @@ public class ParseRegionOfES extends BaseTest {
 				.getResourceAsStream("resources/es/region-ES-province.json")));
 		List<SimpleAddressComponent> root = new ArrayList<SimpleAddressComponent>(autonomousCommunities.size());
 		for (Object autonomousCommunity : autonomousCommunities) {
-			SimpleAddressComponent community = BeanUtil.map2bean((Map<?, ?>) autonomousCommunity,
+			SimpleAddressComponent community = Bean.fromMap((Map<?, ?>) autonomousCommunity,
 					new SimpleAddressComponent());
 			root.add(community);
 			if (community.getChildren() == null) {
