@@ -11,8 +11,8 @@ import com.github.sunnysuperman.addressbook.lookup.MapLocationService.CoordType;
 public class BaiduMapLocationServiceTest extends AddressBaseTest {
 
 	private void test(CoordType coordType, double lng, double lat) throws Exception {
-		BaiduMapService service = new BaiduMapService(new LocationServiceOptions(),
-				SecureConfigs.get().getString("location.baidu.key"), getAddressFinder());
+		BaiduMapService service = new BaiduMapService(new LocationServiceOptions(), SecureConfigs.get().getString(
+				"location.baidu.key"), getAddressFinder());
 		AddressComponent ac = service.lookupAddress(coordType, lng, lat);
 		assertTrue(ac != null);
 		System.out.println("//" + ac);
@@ -105,9 +105,9 @@ public class BaiduMapLocationServiceTest extends AddressBaseTest {
 	}
 
 	public void test10() throws Exception {
-//		test(118.011597, 36.831478);
-		test(118.01145,36.831567);
-		
+		// test(118.011597, 36.831478);
+		test(118.01145, 36.831567);
+
 	}
 
 }

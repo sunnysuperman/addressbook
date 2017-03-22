@@ -1,9 +1,8 @@
 package com.github.sunnysuperman.addressbook;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class Address extends AddressBase implements Serializable, Cloneable {
+public class Address extends AddressBase implements Cloneable {
 	private String formatAddress;
 
 	public Address(List<String> hierarchy) {

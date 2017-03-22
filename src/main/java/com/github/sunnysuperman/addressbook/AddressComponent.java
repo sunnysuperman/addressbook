@@ -9,7 +9,7 @@ import java.util.Map;
 import com.github.sunnysuperman.commons.locale.LocaleUtil;
 import com.github.sunnysuperman.commons.utils.CollectionUtil;
 
-public class AddressComponent implements java.io.Serializable {
+public class AddressComponent {
 	private String code;
 	private Map<String, String> name;
 	private List<AddressComponent> children;
@@ -57,11 +57,6 @@ public class AddressComponent implements java.io.Serializable {
 		}
 		this.children = Collections.unmodifiableList(children);
 	}
-
-//	public void setName(Map<String, String> name) {
-//		validateFrozen();
-//		this.name = name;
-//	}
 
 	public String code() {
 		return code;
